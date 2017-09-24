@@ -12,6 +12,7 @@
     <title>Six Moments of Glory</title>
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/jquery-3.2.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
     <script src="vendors/bootstrap.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
@@ -19,94 +20,37 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <header>
+    <div>
+        <h1>Gallery of My Life</h1>
+    </div>
 </header>
 
 <body ng-app="myApp">
     <section ng-controller="PictureController as PC">
         <!-- ng-init="PC.getPictures()" -->
-        <div>
-            <h1>Gallery of My Life</h1>
-        </div>
+
         <div class="container">
             <div ng-repeat="pic in PC.gallery">
                 <div class="clearfix" ng-if="$index % 3 == 0"></div>
                 <div class="card col-md-4">
-                    <div class="card-header"><h4>{{ pic.title }}</h4></div>
-                    <div ng-show="pic.picVisible"  ng-click="PC.toggle(pic)">
+                    <div class="card-header">
+                        <h4>{{ pic.title }}</h4>
+                    </div>
+                    <div ng-show="pic.picVisible" ng-click="PC.toggle(pic)">
                         <img class="card-img-top" ng-src="{{pic.url}}">
                     </div>
                     <div class="card-block">
                         <div ng-show="pic.textVisible">
                             <p class="card-text" ng-click="PC.toggle(pic)">{{ pic.text }}</p>
                         </div>
-                        <button class="btn btn-primary" ng-click="count = count + 1" ng-init="count=0">Wuv!</button> {{count}} wuvs!
+                        <button class="btn btn-primary" ng-click="count = count + 1" ng-init="count=0">Wuv!</button> {{count}}
+                        wuvs!
                     </div>
                 </div>
             </div>
         </div>
-
-        <!--
-        <div class="container">
-                <div class="card col-md-4">
-                    <img class="card-img-top" src="images/Wedding2.jpg">
-                    <div class="card-block">
-                        <h4 class="card-title">Mawwiage!</h4>
-                        <p ng-show="showVar" class="card-text">Mawwiage. Mawwiage is what bwings us togethew today. Mawwiage, that bwessed awwangement, that dweam
-                            within a dweam. And wove, twue wove, wiww fowwow you fowevah and evah… So tweasuwe youw wove.</p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs1 = wuvs1 + 1">Wuv, tru wuv!</a><span>     {{wuvs1}} Wuvs!</span>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <img class="card-img-top" src="images/bicycle1.jpg">
-                    <div class="card-block">
-                        <h4 class="card-title">RAGBRAI!</h4>
-                        <p ng-show="showVar" class="card-text">I love riding my bicycle, and where better to ride than across the glorious state of Iowa? I was
-                            representing team Reddit with pride.</p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs2 = wuvs2 + 1">Wuv, tru wuv!</a><span>     {{wuvs2}} Wuvs!</span>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <img class="card-img-top" src="images/debate1.jpg">
-                    <div class="card-block">
-                        <h4 class="card-title">Obviously I was pretty cool back then...</h4>
-                        <p ng-show="showVar" class="card-text">This is our high school debate team getting ready for a tournament. I loved debating, and I had some
-                            great classmates to do it with.</p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs3 = wuvs3 + 1">Wuv, tru wuv!</a><span>     {{wuvs3}} Wuvs!</span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="card col-md-4">
-                    <img class="card-img-top" src="images/hiking2.jpg">
-                    <div class="card-block">
-                        <h4 class="card-title">Hiking with Lucy.</h4>
-                        <p ng-show="showVar" class="card-text">I love hiking and I love my dog. She is pretty awesome. Here she is hiking on a chilly fall day.
-                            She even carrier some of her own food!</p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs4 = wuvs4 + 1">Wuv, tru wuv!</a><span>     {{wuvs4}} Wuvs!</span>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <img class="card-img-top" src="images/rockclimbing2.jpg">
-                    <div class="card-block">
-                        <h4 class="card-title">Rock Climbing</h4>
-                        <p ng-show="showVar" class="card-text">I spent two glorious months camped out behind a pizza parlor in rural Kentucky so I could rock climb
-                            every single day. Here is an action shot. </p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs5 = wuvs5 + 1">Wuv, tru wuv!</a><span>     {{wuvs5}} Wuvs!</span>
-                    </div>
-                </div>
-                <div class="card col-md-4">
-                    <img class="card-img-top" src="images/hiking1.jpg">
-                    <div class="card-block">
-                        <h4 class="card-title">My first 14er!</h4>
-                        <p ng-show="showVar" class="card-text">As a last 'hurrah!' before Prime, I went out as visited my friend in Colorado. We got to spend one
-                            epic morning climbing Mt. Sherman. It's over 14,000 feet in elevation, and it provided breathtaking
-                            views that justified the hike up.</p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs6 = wuvs6 + 1">Wuv, tru wuv!</a><span>     {{wuvs6}} Wuvs!</span>
-                    </div>
-                </div>
-        </div>
-    -->
     </section>
 </body>
 <footer>

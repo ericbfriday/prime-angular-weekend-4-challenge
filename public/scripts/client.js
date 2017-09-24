@@ -47,7 +47,7 @@ wuvs: 0
 
 {url: 'images/hiking1.jpg',
 title: 'My first 14er!',
-text: 'As a last "hurrah!" before Prime, I went out as visited my friend in Colorado. We got to spend one epic morning climbing Mt. Sherman. It\'s over 14,000 feet in elevation, and it provided breathtaking views that justified the hike up.',
+text: 'As a last "hurrah!" before Prime, I went out and visited my friend in Colorado. We got to spend one epic morning climbing Mt. Sherman. It\'s over 14,000 feet in elevation, and it provided breathtaking views that justified the hike up.',
 picVisible: true,
 textVisible: false,
 wuvs: 0
