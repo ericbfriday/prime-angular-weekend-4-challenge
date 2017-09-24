@@ -9,7 +9,7 @@ app.use( bodyParser.json() );
 app.use( '/', index );
 
 // globals
-var port = 5318;
+var port = process.env.PORT || 8080;
 
 // spin up server
 app.listen( port, function(){
