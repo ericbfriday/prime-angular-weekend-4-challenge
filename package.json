@@ -1,27 +1,27 @@
 {
-  "name": "Pet-Hotel-Single-Table",
+  "name": "angular-weekend-4-challenge",
   "version": "1.0.0",
-  "description": "Your team has started a new business in Uptown for pet-enthusiasts that also need to vacation without their beloved pets.",
-  "main": "index.js",
+  "description": "We're switching up our client-side this weekend with Angular! Our focus will be on getting comfortable with what Angular can do for us, so most of our effort will be on client-side JavaScript and, hopefully, experimenting with CSS.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
+    "pg": "^7.3.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericbfriday/Pet-Hotel-Single-Table.git"
+    "url": "git+https://github.com/ericbfriday/angular-weekend-4-challenge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ericbfriday/Pet-Hotel-Single-Table/issues"
+    "url": "https://github.com/ericbfriday/angular-weekend-4-challenge/issues"
   },
-  "homepage": "https://github.com/ericbfriday/Pet-Hotel-Single-Table#readme",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.15.4",
-    "pg": "^7.3.0"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/ericbfriday/angular-weekend-4-challenge#readme"
 }
