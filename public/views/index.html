@@ -34,7 +34,7 @@
                 <div class="card col-md-4">
                     <div class="card-header"><h4>{{ pic.title }}</h4></div>
                     <div ng-show="pic.picVisible"  ng-click="PC.toggle(pic)">
-                        <img class="card-img-top" src="{{pic.url}}">
+                        <img class="card-img-top" ng-src="{{pic.url}}">
                     </div>
                     <div class="card-block">
                         <div ng-show="pic.textVisible">
