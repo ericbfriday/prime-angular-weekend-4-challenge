@@ -30,8 +30,8 @@ wuvs: 0
 },
 
 {url: 'images/hiking2.jpg',
-title: 'Hiking with Lucy.',
-text: 'I love hiking and I love my dog. She is pretty awesome. Here she is hiking on a chilly fall day. She even carrier some of her own food!',
+title: 'Hiking with Lucy',
+text: 'I love hiking and I love my dog. She is pretty awesome. Here she is hiking on a chilly fall day. She even carries some of her own food!',
 picVisible: true,
 textVisible: false,
 wuvs: 0
@@ -39,7 +39,11 @@ wuvs: 0
 
 {url: 'images/rockclimbing2.jpg',
 title: 'Rock Climbing',
-text: 'I spent two glorious months camped out behind a pizza parlor in rural Kentucky so I could rock climb every single day. Here is an action shot.'},
+text: 'I spent two glorious months camped out behind a pizza parlor in rural Kentucky so I could rock climb every single day. Here is an action shot.',
+picVisible: true,
+textVisible: false,
+wuvs: 0
+},
 
 {url: 'images/hiking1.jpg',
 title: 'My first 14er!',
@@ -58,16 +62,13 @@ myApp.controller( 'PictureController', function( $http ) {
     var vm = this;
     vm.gallery = photoGallery;
 
-    var showText = true;
-
-    vm.showText = function() {
-        console.log('In showText of PC -> ' + 'nothing to display');
-    }
-
     vm.toggle = function(pic) {
-        console.log('Toggling! -> ' + pic.picVisible);
+        console.log('Toggling! -> ' + pic.picVisible + ' ' + pic.textVisible);
         pic.picVisible = !pic.picVisible;
-    }
+        pic.textVisible = !pic.textVisible;
+    };
+
+
     // .then( function( response ){
     //    console.log('in then of showText of PC -> ', + response);
         

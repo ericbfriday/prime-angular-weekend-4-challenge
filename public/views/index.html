@@ -32,11 +32,15 @@
             <div ng-repeat="pic in PC.gallery">
                 <div class="clearfix" ng-if="$index % 3 == 0"></div>
                 <div class="card col-md-4">
-                    <img class="card-img-top" src="{{pic.url}}" ng-click="PC.toggle(pic)">
+                    <div class="card-header"><h4>{{ pic.title }}</h4></div>
+                    <div ng-show="pic.picVisible"  ng-click="PC.toggle(pic)">
+                        <img class="card-img-top" src="{{pic.url}}">
+                    </div>
                     <div class="card-block">
-                        <h4 class="card-title">{{ pic.title }}</h4>
-                        <p class="card-text" ng-show="pic.textVisible" ng-click="PC.toggle(pic)">{{ pic.text }}</p>
-                        <a href="#" class="btn btn-primary" ng-click="wuvs" {{ $index }} " = wuvs{{ $index }} + 1">Wuv, tru wuv!</a><span>     {{wuvs1}} Wuvs!</span>
+                        <div ng-show="pic.textVisible">
+                            <p class="card-text" ng-click="PC.toggle(pic)">{{ pic.text }}</p>
+                        </div>
+                        <button class="btn btn-primary" ng-click="count = count + 1" ng-init="count=0">Wuv!</button> {{count}} wuvs!
                     </div>
                 </div>
             </div>
