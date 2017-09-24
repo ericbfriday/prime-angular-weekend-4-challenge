@@ -12,7 +12,7 @@
     <title>Six Moments of Glory</title>
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/jquery-3.2.1.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script> -->
     <script src="vendors/bootstrap.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
@@ -28,11 +28,11 @@
 </header>
 
 <body ng-app="myApp">
-    <section ng-controller="PictureController as PC">
+    <section ng-controller="PictureController as PC" ng-init="PC.getPictures()">
         <!-- ng-init="PC.getPictures()" -->
 
         <div class="container">
-            <div ng-repeat="pic in PC.gallery">
+            <div ng-repeat="pic in PC.pictures">
                 <div class="clearfix" ng-if="$index % 3 == 0"></div>
                 <div class="card col-md-4">
                     <div class="card-header">
@@ -45,7 +45,7 @@
                         <div ng-show="pic.textVisible">
                             <p class="card-text" ng-click="PC.toggle(pic)">{{ pic.text }}</p>
                         </div>
-                        <button class="btn btn-primary" ng-click="count = count + 1" ng-init="count=0">Wuv!</button> {{count}}
+                        <button class="btn btn-primary wuv-button" ng-click="count = count + 1" ng-init="count=0">Wuv!</button> {{count}}
                         wuvs!
                     </div>
                 </div>
