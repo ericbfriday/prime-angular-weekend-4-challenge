@@ -13,7 +13,7 @@ textVisible: false,
 wuvs: 0
 },
 
-{url: 'images/bicycle1.jpg',
+{url: 'images/bicycle1.JPG',
 title: 'RAGBRAI!',
 text: 'I love riding my bicycle, and where better to ride than across the glorious state of Iowa? I was representing team Reddit with pride.',
 picVisible: true,
@@ -29,7 +29,7 @@ textVisible: false,
 wuvs: 0
 },
 
-{url: 'images/hiking2.jpg',
+{url: 'images/hiking2.JPG',
 title: 'Hiking with Lucy',
 text: 'I love hiking and I love my dog. She is pretty awesome. Here she is hiking on a chilly fall day. She even carries some of her own food!',
 picVisible: true,
