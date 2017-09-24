@@ -3,6 +3,7 @@ console.log( 'js' );
 // angular module
 var myApp = angular.module( 'myApp', [] );
 
+// myApp controller
 myApp.controller( 'PictureController', function( $http ) {
     console.log('NG working');
     var vm = this;
@@ -20,5 +21,17 @@ myApp.controller( 'PictureController', function( $http ) {
             vm.pictures = response.data;
             
         });
-    };
+    }; // end vm.getPictures
+
+    vm.likes = function() {
+        console.log('In vm.likes');
+
+        $http({
+            type: 'POST',
+            url: '/likes'
+        }).then( function( response) {
+            console.log('response from server in likes -> ', response);
+            vm.likes = response.data;
+        });
+    }; // end vm.likes function
 });

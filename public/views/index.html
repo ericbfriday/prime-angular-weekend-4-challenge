@@ -2,31 +2,90 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Moments of My Life</title>
-        <script src="vendors/angular.min.js"></script>
-        <script src="vendors/jquery-3.2.1.min.js"></script> <!-- BootstrapJS requires jquery -->
-        <script src="vendors/bootstrap.min.js"></script>
-        <script src="scripts/client.js"></script>
-        <link rel="stylesheet" href="vendors/bootstrap.min.css">
-        <link rel="stylesheet" href="styles/styles.css">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <header>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-    </header>
-    <body ng-app="myApp">
-        <p>This is a webpage</p>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-    </body>
-    <footer>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moments of My Life</title>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/jquery-3.2.1.min.js"></script>
+    <script src="vendors/bootstrap.min.js"></script>
+    <script src="scripts/client.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+</header>
 
-    </footer>
+<body ng-app="myApp">
+    <!-- <section ng-controller="PictureController as PC" ng-init="PC.getPictures()"> -->
+    <div class="container">
+        <div class="row">
+
+            <div class="card col-md-4">
+                <img class="card-img-top" src="images/Wedding2.jpg">
+                <div class="card-block">
+                    <h4 class="card-title">Mawwiage!</h4>
+                    <p class="card-text">Mawwiage. Mawwiage is what bwings us togethew today. Mawwiage, that bwessed awwangement, that dweam within
+                        a dweam. And wove, twue wove, wiww fowwow you fowevah and evah… So tweasuwe youw wove.</p>
+                    <a href="#" class="btn btn-primary">Wuv, tru wuv!</a>
+                </div>
+            </div>
+            <div class="card col-md-4">
+                <img class="card-img-top" src="images/bicycle1.jpg">
+                <div class="card-block">
+                    <h4 class="card-title">RAGBRAI!</h4>
+                    <p class="card-text">I love riding my bicycle, and where better to ride than across the glorious state of Iowa? I was representing team Reddit with pride.</p>
+                    <a href="#" class="btn btn-primary">Wuv!</a>
+                </div>
+            </div>
+            <div class="card col-md-4">
+                <img class="card-img-top" src="images/debate1.jpg">
+                <div class="card-block">
+                    <h4 class="card-title">Obviously I was pretty cool back then...</h4>
+                    <p class="card-text">This is our high school debate team getting ready for a tournament. I loved debating, and I had some great classmates to do it with.</p>
+                    <a href="#" class="btn btn-primary">Wuv!</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card col-md-4">
+                <img class="card-img-top" src="images/hiking2.jpg">
+                <div class="card-block">
+                    <h4 class="card-title">Hiking with Lucy.</h4>
+                    <p class="card-text">I love hiking and I love my dog. She is pretty awesome. Here she is hiking on a chilly fall day. She even carrier some of her own food!</p>
+                    <a href="#" class="btn btn-primary">Wuv!</a>
+                </div>
+            </div>
+            <div class="card col-md-4">
+                <img class="card-img-top" src="images/rockclimbing2.jpg">
+                <div class="card-block">
+                    <h4 class="card-title">Rock Climbing</h4>
+                    <p class="card-text">I spent two glorious months camped out behind a pizza parlor in rural Kentucky so I could rock climb every single day. Here is an action shot. </p>
+                    <a href="#" class="btn btn-primary">Wuv!</a>
+                </div>
+            </div>
+            <div class="card col-md-4">
+                <img class="card-img-top" src="images/hiking1.jpg">
+                <div class="card-block">
+                    <h4 class="card-title">My first 14er!</h4>
+                    <p class="card-text">As a last 'hurrah!' before Prime, I went out as visited my friend in Colorado. We got to spend one epic morning climbing Mt. Sherman. It's over 14,000 feet in elevation, and it provided breathtaking views that justified the hike up.</p>
+                    <a href="#" class="btn btn-primary">Wuv!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Can we NG repeat to post the entire item to the DOM? -->
+
+    <!-- </section> -->
+</body>
+<footer>
+
+</footer>
+
 </html>
