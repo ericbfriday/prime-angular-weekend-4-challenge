@@ -12,7 +12,7 @@
     <title>Six Moments of Glory</title>
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/jquery-3.2.1.min.js"></script>
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>
     <script src="vendors/bootstrap.min.js"></script>
     <script src="scripts/client.js"></script>
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
@@ -31,7 +31,7 @@
     <section ng-controller="PictureController as PC" ng-init="PC.getPictures()">
         <!-- ng-init="PC.getPictures()" -->
 
-        <div class="container">
+        <div class="container-fluid">
             <div ng-repeat="pic in PC.pictures">
                 <div class="clearfix" ng-if="$index % 3 == 0"></div>
                 <div class="card col-md-4">
